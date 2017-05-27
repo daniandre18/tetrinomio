@@ -1,0 +1,19 @@
+{
+  "name": "tetris",
+  "version": "1.0.0",
+  "description": "Tetris nodejs usado jquery",
+  "dependecies": {
+    "express": "*"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+  },
+  "author": "Danilo Pineda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mocha": "^3.3.0"
+  }
+}
