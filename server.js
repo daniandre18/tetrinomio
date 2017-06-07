@@ -11,6 +11,32 @@ app.get('/cargarPieza/', function(req, res) {
 	res.json(respuesta);
 });
 
+app.get('/ficha/:movimiento?', function(req, res) {
+	console.log("cargarPieza");
+
+	var movimiento = req.query.movimiento;
+
+	switch(movimiento) {
+	    case "traer":
+	        respuesta = cargarPieza();	   
+	        break;
+	    case "girar":
+	        respuesta = rotarPieza(1);
+	        break;
+	    case "izquierda":
+	        respuesta = moverPieza("izquierda")
+	        break;
+	    case "derecha":
+	        respuesta = moverPieza("derecha")
+	        break;
+	    default:
+	        break;
+		}
+
+	res.json(respuesta);
+});
+
+
 app.get("/moverPieza/:dir?",function(req,res){
 	var dir = req.query.dir;
 	respuesta = moverPieza(dir);
